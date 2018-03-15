@@ -1,4 +1,4 @@
-version: 1.0
+version: 1.1
 name: import-vm-disk-apb
 description: Import a virtual machine disk into a PVC for Kubevirt
 bindable: False
