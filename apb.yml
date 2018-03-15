@@ -1,0 +1,31 @@
+version: 1.0
+name: import-vm-disk-apb
+description: Import a virtual machine disk into a PVC for Kubevirt
+bindable: False
+async: optional
+metadata:
+  displayName: Import VM Disk (APB)
+  imageUrl: https://cdn.pbrd.co/images/H5Gutd7.png
+plans:
+  - name: default
+    description: Retrieve VM disk from a URL
+    free: True
+    metadata: {}
+    parameters:
+      - title: Openshift Admin User
+        name: admin_user
+        type: string
+        required: true
+      - title: Openshift Admin Password
+        name: admin_password
+        type: string
+        required: true
+        display_type: password
+      - title: Disk Image URL
+        name: url
+        type: string
+        required: true
+      - title: Target PVC Name
+        name: pvc_name
+        type: string
+        required: true

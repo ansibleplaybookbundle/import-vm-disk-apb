@@ -1,0 +1,13 @@
+---
+- include: "login.yml"
+
+- set_fact:
+  size_bytes: "0"
+
+- name: Build PVC
+  template:
+    src: cdi-pvc.yml
+    dest: /tmp/pvc.yml
+
+- name: Delete PVC
+  command: "oc delete -f /tmp/pvc.yml"

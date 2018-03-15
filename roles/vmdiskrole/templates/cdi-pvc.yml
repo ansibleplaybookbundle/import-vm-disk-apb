@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "{{ pvc_name }}"
+  annotations:
+    kubevirt.io/storage.import.endpoint: "{{ url }}"
+spec:
+  storageClassName: kubevirt
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: "{{ size_bytes }}|int"
