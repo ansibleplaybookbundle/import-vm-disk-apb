@@ -3,8 +3,10 @@ name: import-vm-disk-apb
 description: Import a virtual machine disk into a PVC for Kubevirt
 bindable: False
 async: optional
+tags:
+  - virtualmachine
 metadata:
-  displayName: Import VM Disk (APB)
+  displayName: Import VM Disk
   imageUrl: https://cdn.pbrd.co/images/H5Gutd7.png
 plans:
   - name: default
